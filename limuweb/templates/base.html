@@ -28,6 +28,7 @@
 	</div>
 	<div class="green box" id="input" >
         <form method="POST" id="inputform" name='inputform'>
+	{% csrf_token %}
 			<input type="text" id="inputfield" name="inputfield" onblur="focusinput=this;setTimeout(function() {focusinput.focus();},10);" />
 		</form>
     </div>
