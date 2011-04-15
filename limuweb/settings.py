@@ -106,6 +106,7 @@ INSTALLED_APPS = (
     # 'debug_toolbar',
     # 'django_extensions',
 
+    'limuweb.global',
     'limuweb.osto',
 
 )
