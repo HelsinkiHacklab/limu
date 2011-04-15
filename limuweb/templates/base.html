@@ -1,20 +1,37 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <link rel="stylesheet" href="style.css" />
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css&3.3.0/build/cssgrids/grids-min.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
+	<style type="text/css">
+	#inputform {
+		padding: 10px 15px;
+		margin: 0;
+		left:0;
+	}
+	#inputfield {
+		background: rgba(255,255,255,0.7);
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		font-size: 150%;
+	}
+	
+	</style>
+
 </head>
 
-<body>
-    <div id="sidebar">
-        {% block sidebar %}
-        <ul>
-{#            <li><a href="/">Home</a></li> #}
-        </ul>
-        {% endblock %}
+<body onload="document.inputform.inputfield.focus()">
+	<div class="green title box">
+		Super Limumaatti 3000
+	</div>
+	<div class="green box" id="input" >
+        <form method="POST" id="inputform" name='inputform'>
+			<input type="text" id="inputfield" name="inputfield" onblur="focusinput=this;setTimeout(function() {focusinput.focus();},10);" />
+		</form>
     </div>
-
-    <div id="content">
+	<div class="green box" id="content">
         {% block content %}{% endblock %}
     </div>
 </body>
