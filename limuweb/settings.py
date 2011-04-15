@@ -62,7 +62,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'l&^ww#m7%0!p9+mulz&ze7q1brz=#e(1dq#%_if=vc!2swywo('
