@@ -15,7 +15,3 @@ class Purchases(models.Model):
 	user = models.ForeignKey(User, related_name='purchases')
 	product = models.ForeignKey(Product, related_name='purchases')
 	price = models.DecimalField(max_digits = 4, decimal_places=2)
-
-class Deposits(models.Model):
-	user = models.ForeignKey(User, related_name='deposits')
-	amount = models.DecimalField(max_digits = 4, decimal_places=2)
