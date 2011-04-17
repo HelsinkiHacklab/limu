@@ -6,15 +6,14 @@ def index(request):
 	items = request.session.get('items', None)
 
 	if items == None:
-		items = []
+		items = request.session['items'] = []
 	
 	if request.method == 'POST' and request.POST['inputfield']:
 		if request.POST['inputfield'] == 'CLEAR':
-			items = []
+			items = request.session['items'] = []
 		else:
 			items.append(request.POST['inputfield'])
-	
-	request.session['items'] = items
+			request.session.modified = True
 	
 	data = {'items': items[::-1]}
 	return render_to_response('osto/index.html',
