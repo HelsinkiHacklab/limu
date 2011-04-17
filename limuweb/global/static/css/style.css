@@ -41,5 +41,15 @@ body {
 	min-height: 100%;
 	height: 100%;
 	margin: 0px auto;
+	padding: 0px;
+}
+.item {
+	min-height: 100px;
 	padding: 10px;
+}
+.item img {
+	width: 100px;
+	height: 100px;
+	float: left;
+	padding-right: 10px;
 }
