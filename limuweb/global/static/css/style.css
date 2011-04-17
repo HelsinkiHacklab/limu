@@ -33,6 +33,8 @@ body {
 	font-weight: bold;
 	
 	color: #fff;
+}
+html.csstransforms .title {
 	-webkit-transform: translate(-300px) rotate(270deg) translate(-190px);
 	-moz-transform: translate(-300px) rotate(270deg) translate(-190px);
 	position: absolute;

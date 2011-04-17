@@ -1,9 +1,10 @@
 {% load webdesign %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js">
 <head>
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css&3.3.0/build/cssgrids/grids-min.css" />
+    <script type="text/javascript" src="{{ STATIC_URL}}js/modernizr.js"></script>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
 	<style type="text/css">
 	#inputform {
