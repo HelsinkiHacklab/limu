@@ -7,3 +7,6 @@
 [submodule "submodules/django-debug-toolbar"]
 	path = submodules/django-debug-toolbar
 	url = https://github.com/robhudson/django-debug-toolbar.git
+[submodule "submodules/Modernizr"]
+	path = submodules/Modernizr
+	url = https://github.com/Modernizr/Modernizr.git
