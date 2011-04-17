@@ -33,6 +33,9 @@ body {
 	font-weight: bold;
 	
 	color: #fff;
+	-webkit-transform: translate(-300px) rotate(270deg) translate(-190px);
+	-moz-transform: translate(-300px) rotate(270deg) translate(-190px);
+	position: absolute;
 }
 #content {
 	min-height: 100%;
