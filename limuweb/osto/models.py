@@ -11,7 +11,7 @@ class Barcode(models.Model):
 	product = models.ForeignKey(Product, related_name='barcodes')
 	code = models.CharField(max_length=200)
 
-class Purchases(models.Model):
+class Purchase(models.Model):
 	user = models.ForeignKey(User, related_name='purchases')
 	product = models.ForeignKey(Product, related_name='purchases')
 	price = models.DecimalField(max_digits = 4, decimal_places=2)
