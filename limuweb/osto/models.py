@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your models here.
 
@@ -17,6 +18,13 @@ class Barcode(models.Model):
 	
 	def __unicode__(self):
 		return u'%s - %s' % (self.product, self.code)
+	
+	@classmethod
+	def get_or_code(self, code):
+		try:
+			return Barcode.objects.get(code=code)
+		except ObjectDoesNotExist:
+			return code
 
 class Purchase(models.Model):
 	user = models.ForeignKey(User, related_name='purchases')
