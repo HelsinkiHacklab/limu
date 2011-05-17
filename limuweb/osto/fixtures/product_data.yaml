@@ -1,7 +1,7 @@
 - fields: {current_price: '2.5', image: '', name: Battery}
   model: osto.product
   pk: 11
-- fields: {current_price: '1.5', name: Coca-Cola}
+- fields: {current_price: '1.5', image: '', name: Coca-Cola}
   model: osto.product
   pk: 8
 - fields: {current_price: '1.5', image: '', name: Coca-Cola Cherry}
