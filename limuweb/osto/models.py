@@ -36,6 +36,7 @@ class Purchase(models.Model):
 	user = models.ForeignKey(User, related_name='purchases')
 	product = models.ForeignKey(Product, related_name='purchases')
 	price = models.DecimalField(max_digits = 6, decimal_places=2)
+	created = models.DateTimeField(auto_now_add = True)
 
 	def __unicode__(self):
 		return u'%s bought %s for %.2fe' % (self.user, self.product, self.price)

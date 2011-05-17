@@ -20,7 +20,7 @@ class BarcodeAdmin(admin.ModelAdmin):
 admin.site.register(Barcode, BarcodeAdmin)
 
 class PurchaseAdmin(admin.ModelAdmin):
-	list_display = ('user','product','price')
+	list_display = ('user','product','price','created')
 #	exclude = ('',)
 #	search_fields = ('',)
 #	date_hierarchy = ''
