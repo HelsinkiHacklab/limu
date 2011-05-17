@@ -4,7 +4,7 @@
 {% for item in items %}
 <div class="green box item">
 {% if item.product %}
-	{% if item.product.image %}<img src="{{ item.product.image.url }}" alt="" />{% endif %}
+	{% if item.product.image %}<img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />{% endif %}
 	<p><b>{{ item.product.name }}</b><br/>{{ item.product.current_price }}e</p>
 {% else %}
 	<p>{{ item }}</p>
