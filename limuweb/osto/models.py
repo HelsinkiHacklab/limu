@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 class Product(models.Model):
 	name = models.CharField(max_length=200)
 	current_price = models.DecimalField(max_digits = 4, decimal_places=2)
+	image = models.ImageField(upload_to='product', blank=True, null=True)
 	
 	def __unicode__(self):
 		return self.name
