@@ -6,7 +6,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 class Product(models.Model):
 	name = models.CharField(max_length=200)
-	current_price = models.DecimalField(max_digits = 4, decimal_places=2)
+	current_price = models.DecimalField(max_digits = 6, decimal_places=2) # 9999.99e maximum
 	image = models.ImageField(upload_to='product', blank=True, null=True)
 	
 	def __unicode__(self):
@@ -29,7 +29,7 @@ class Barcode(models.Model):
 class Purchase(models.Model):
 	user = models.ForeignKey(User, related_name='purchases')
 	product = models.ForeignKey(Product, related_name='purchases')
-	price = models.DecimalField(max_digits = 4, decimal_places=2)
+	price = models.DecimalField(max_digits = 6, decimal_places=2)
 
 	def __unicode__(self):
 		return u'%s bought %s for %.2fe' % (self.user, self.product, self.price)
