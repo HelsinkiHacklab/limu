@@ -31,9 +31,15 @@
 - fields: {current_price: '2.5', image: '', name: R20+}
   model: osto.product
   pk: 13
+- fields: {current_price: '1', image: '', name: Rio Cola - Laitila}
+  model: osto.product
+  pk: 17
 - fields: {current_price: '2.5', image: '', name: "Rockstar \u2605"}
   model: osto.product
   pk: 10
+- fields: {current_price: '1', image: '', name: Sitruuna-Soodaa - Laitila}
+  model: osto.product
+  pk: 16
 - fields: {current_price: '2', image: '', name: Spacebar Kurpitsa-Snack}
   model: osto.product
   pk: 15
@@ -76,9 +82,15 @@
 - fields: {code: F5901597860082, product: 13}
   model: osto.barcode
   pk: 13
+- fields: {code: F6418654001412, product: 17}
+  model: osto.barcode
+  pk: 17
 - fields: {code: F8728500996679, product: 10}
   model: osto.barcode
   pk: 10
+- fields: {code: F6418654002075, product: 16}
+  model: osto.barcode
+  pk: 16
 - fields: {code: F4032277002964, product: 15}
   model: osto.barcode
   pk: 15
