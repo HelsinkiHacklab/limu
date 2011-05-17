@@ -5,7 +5,7 @@ from django.core.exceptions import ObjectDoesNotExist
 # Create your models here.
 
 class Product(models.Model):
-	name = models.CharField(max_length=200)
+	name = models.CharField(max_length=200, unique=True)
 	current_price = models.DecimalField(max_digits = 6, decimal_places=2) # 9999.99e maximum
 	image = models.ImageField(upload_to='product', blank=True, null=True)
 	
@@ -14,7 +14,7 @@ class Product(models.Model):
 
 class Barcode(models.Model):
 	product = models.ForeignKey(Product, related_name='barcodes')
-	code = models.CharField(max_length=200)
+	code = models.CharField(max_length=200, unique=True)
 	
 	def __unicode__(self):
 		return u'%s - %s' % (self.product, self.code)
