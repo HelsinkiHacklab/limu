@@ -5,7 +5,7 @@
 <div class="green box item">
 {% if item.product %}
 	{% if item.product.image %}<img src="{{ item.product.image.url }}" alt="" />{% endif %}
-	<p>{{ item.product.name }}</p>
+	<p><b>{{ item.product.name }}</b><br/>{{ item.product.current_price }}e</p>
 {% else %}
 	<p>{{ item }}</p>
 {% endif %}
