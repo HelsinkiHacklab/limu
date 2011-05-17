@@ -12,13 +12,19 @@ class Product(models.Model):
 	def __unicode__(self):
 		return self.name
 
+	class Meta:
+		ordering = ["name"]
+
 class Barcode(models.Model):
 	product = models.ForeignKey(Product, related_name='barcodes')
 	code = models.CharField(max_length=200, unique=True)
 	
 	def __unicode__(self):
 		return u'%s - %s' % (self.product, self.code)
-	
+
+	class Meta:
+		ordering = ["product"]
+
 	@classmethod
 	def get_or_code(self, code):
 		try:
