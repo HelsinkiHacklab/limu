@@ -1,0 +1,84 @@
+- fields: {current_price: '2.5', image: '', name: Battery}
+  model: osto.product
+  pk: 11
+- fields: {current_price: '1.5', name: Coca-Cola}
+  model: osto.product
+  pk: 8
+- fields: {current_price: '1.5', image: '', name: Coca-Cola Cherry}
+  model: osto.product
+  pk: 5
+- fields: {current_price: '1.5', image: '', name: Dr. Pepper}
+  model: osto.product
+  pk: 1
+- fields: {current_price: '1.5', image: '', name: Fanta Appelsiini}
+  model: osto.product
+  pk: 6
+- fields: {current_price: '1.5', image: '', name: "Hyv\xE4\xE4 p\xE4iv\xE4\xE4"}
+  model: osto.product
+  pk: 9
+- fields: {current_price: '1', image: '', name: Lemona - Laitila}
+  model: osto.product
+  pk: 12
+- fields: {current_price: '1.5', image: '', name: Mountain Dew}
+  model: osto.product
+  pk: 4
+- fields: {current_price: '1.5', image: '', name: Pepsi}
+  model: osto.product
+  pk: 14
+- fields: {current_price: '1.5', image: '', name: Pepsi Max}
+  model: osto.product
+  pk: 7
+- fields: {current_price: '2.5', image: '', name: R20+}
+  model: osto.product
+  pk: 13
+- fields: {current_price: '2.5', image: '', name: "Rockstar \u2605"}
+  model: osto.product
+  pk: 10
+- fields: {current_price: '1.5', image: '', name: Sprite Zero}
+  model: osto.product
+  pk: 3
+- fields: {current_price: '42', image: '', name: Sprite Zero 1.5l}
+  model: osto.product
+  pk: 2
+- fields: {code: F6415600025300, product: 11}
+  model: osto.barcode
+  pk: 11
+- fields: {code: F6415600501781, product: 8}
+  model: osto.barcode
+  pk: 8
+- fields: {code: F6415600509992, product: 5}
+  model: osto.barcode
+  pk: 5
+- fields: {code: F6415600507875, product: 1}
+  model: osto.barcode
+  pk: 1
+- fields: {code: F6415600502153, product: 6}
+  model: osto.barcode
+  pk: 6
+- fields: {code: F6415600508681, product: 9}
+  model: osto.barcode
+  pk: 9
+- fields: {code: F6418654002082, product: 12}
+  model: osto.barcode
+  pk: 12
+- fields: {code: F6413600013792, product: 4}
+  model: osto.barcode
+  pk: 4
+- fields: {code: F6413600013044, product: 14}
+  model: osto.barcode
+  pk: 14
+- fields: {code: F6413600013082, product: 7}
+  model: osto.barcode
+  pk: 7
+- fields: {code: F5901597860082, product: 13}
+  model: osto.barcode
+  pk: 13
+- fields: {code: F8728500996679, product: 10}
+  model: osto.barcode
+  pk: 10
+- fields: {code: F6415600507820, product: 3}
+  model: osto.barcode
+  pk: 3
+- fields: {code: F6415600507844, product: 2}
+  model: osto.barcode
+  pk: 2
