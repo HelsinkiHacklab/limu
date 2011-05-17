@@ -3,8 +3,12 @@
 {% block content %}
 {% for item in items %}
 <div class="green box item">
-	<img src="" alt="" />
+{% if item.product %}
+	{% if item.product.image %}<img src="{{ item.product.image.url }}" alt="" />{% endif %}
+	<p>{{ item.product.name }}</p>
+{% else %}
 	<p>{{ item }}</p>
+{% endif %}
 </div>
 {% endfor %}
 {% endblock %}
