@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+import sys,os
+if sys.platform=='win32':
+    basedir=os.environ.get("BASEDIR","C:\\limu")
+    sys.path.append(os.path.join(basedir,"submodules","django"))
 from django.core.management import execute_manager
 try:
     import settings # Assumed to be in the same directory.

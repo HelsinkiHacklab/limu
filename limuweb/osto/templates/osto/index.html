@@ -1,4 +1,14 @@
 {% extends "base.html" %}
+{% load webdesign %}
 {% block content %}
-This page unintentionally left blank.
+{% for item in items %}
+<div class="green box item">
+{% if item.product %}
+	{% if item.product.image %}<img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />{% endif %}
+	<p><b>{{ item.product.name }}</b><br/>{{ item.product.current_price }}e</p>
+{% else %}
+	<p>{{ item }}</p>
+{% endif %}
+</div>
+{% endfor %}
 {% endblock %}

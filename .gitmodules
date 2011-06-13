@@ -1,0 +1,12 @@
+[submodule "submodules/django"]
+	path = submodules/django
+	url = https://github.com/django/django.git
+[submodule "submodules/django-extensions"]
+	path = submodules/django-extensions
+	url = https://github.com/django-extensions/django-extensions.git
+[submodule "submodules/django-debug-toolbar"]
+	path = submodules/django-debug-toolbar
+	url = https://github.com/robhudson/django-debug-toolbar.git
+[submodule "submodules/Modernizr"]
+	path = submodules/Modernizr
+	url = https://github.com/Modernizr/Modernizr.git
