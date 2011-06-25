@@ -49,54 +49,54 @@
 - fields: {current_price: '42', image: '', name: Sprite Zero 1.5l}
   model: osto.product
   pk: 2
-- fields: {code: F6415600025300, product: 11}
+- fields: {code: 6415600025300, product: 11}
   model: osto.barcode
   pk: 11
-- fields: {code: F6415600501781, product: 8}
+- fields: {code: 6415600501781, product: 8}
   model: osto.barcode
   pk: 8
-- fields: {code: F6415600509992, product: 5}
+- fields: {code: 6415600509992, product: 5}
   model: osto.barcode
   pk: 5
-- fields: {code: F6415600507875, product: 1}
+- fields: {code: 6415600507875, product: 1}
   model: osto.barcode
   pk: 1
-- fields: {code: F6415600502153, product: 6}
+- fields: {code: 6415600502153, product: 6}
   model: osto.barcode
   pk: 6
-- fields: {code: F6415600508681, product: 9}
+- fields: {code: 6415600508681, product: 9}
   model: osto.barcode
   pk: 9
-- fields: {code: F6418654002082, product: 12}
+- fields: {code: 6418654002082, product: 12}
   model: osto.barcode
   pk: 12
-- fields: {code: F6413600013792, product: 4}
+- fields: {code: 6413600013792, product: 4}
   model: osto.barcode
   pk: 4
-- fields: {code: F6413600013044, product: 14}
+- fields: {code: 6413600013044, product: 14}
   model: osto.barcode
   pk: 14
-- fields: {code: F6413600013082, product: 7}
+- fields: {code: 6413600013082, product: 7}
   model: osto.barcode
   pk: 7
-- fields: {code: F5901597860082, product: 13}
+- fields: {code: 5901597860082, product: 13}
   model: osto.barcode
   pk: 13
-- fields: {code: F6418654001412, product: 17}
+- fields: {code: 6418654001412, product: 17}
   model: osto.barcode
   pk: 17
-- fields: {code: F8728500996679, product: 10}
+- fields: {code: 8728500996679, product: 10}
   model: osto.barcode
   pk: 10
-- fields: {code: F6418654002075, product: 16}
+- fields: {code: 6418654002075, product: 16}
   model: osto.barcode
   pk: 16
-- fields: {code: F4032277002964, product: 15}
+- fields: {code: 4032277002964, product: 15}
   model: osto.barcode
   pk: 15
-- fields: {code: F6415600507820, product: 3}
+- fields: {code: 6415600507820, product: 3}
   model: osto.barcode
   pk: 3
-- fields: {code: F6415600507844, product: 2}
+- fields: {code: 6415600507844, product: 2}
   model: osto.barcode
   pk: 2
