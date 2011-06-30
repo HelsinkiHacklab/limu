@@ -9,9 +9,13 @@ class Account(models.Model):
     def __unicode__(self):
         return self.name
     def deposit(self,sum):
-        balance += sum
+        if sum<0:
+            raise ValueError(sum)
+        self.balance += sum
     def withdraw(self,sum):
-        balance -= sum
+        if sum<0 or sum>self.balance:
+            raise ValueError(sum)
+        self.balance -= sum
 
 class AccountCode(models.Model):
     account = models.ForeignKey(Account, related_name='account_codes')
@@ -21,7 +25,7 @@ class AccountCode(models.Model):
         return u'%s - %s' % (self.product, self.code)
         
     class Meta:
-        ordering = ["product"]
+        ordering = ["account"]
         
     @classmethod
     def get_or_code(self, code):
