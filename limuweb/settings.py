@@ -108,5 +108,6 @@ INSTALLED_APPS = (
 
     'limuweb.global',
     'limuweb.osto',
+    'limuweb.tilit',
 
 )
