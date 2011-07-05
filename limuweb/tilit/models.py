@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+from django.core.exceptions import ObjectDoesNotExist
 
 class Account(models.Model):
     name = models.CharField(max_length=200, unique=False)
@@ -22,7 +23,7 @@ class AccountCode(models.Model):
     code = models.CharField(max_length=200, unique=True)
     
     def __unicode__(self):
-        return u'%s - %s' % (self.product, self.code)
+        return u'%s - %s' % (self.account, self.code)
         
     class Meta:
         ordering = ["account"]
@@ -32,4 +33,4 @@ class AccountCode(models.Model):
         try:
             return AccountCode.objects.get(code=code)
         except ObjectDoesNotExist:
-            return 
+            return code
