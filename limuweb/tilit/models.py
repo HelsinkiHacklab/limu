@@ -9,13 +9,7 @@ class Account(models.Model):
     
     def __unicode__(self):
         return self.name
-    def deposit(self,sum):
-        if sum<0:
-            raise ValueError(sum)
-        self.balance += sum
-    def withdraw(self,sum):
-        if sum<0 or sum>self.balance:
-            raise ValueError(sum)
+    def debit(self,sum):
         self.balance -= sum
 
 class AccountCode(models.Model):
