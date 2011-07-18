@@ -5,6 +5,10 @@
 <div class="green box item">
   {% if account.account %}
 	<b>{{account.account.name}}:</b> {{account.account.balance}}
+	<form method="POST" accept-charset="utf-8">
+		{% csrf_token %}
+		<p><input type="submit" name="inputfield" value="Clear"></p>
+	</form>
   {% else %}
 	Tiliä {{ account }} ei löytynyt.
   {% endif %}
@@ -22,7 +26,12 @@
 {% endfor %}
 {% if total %}
 <div class="green box item">
-<p>Yhteensä: {{ total }}</p>
+<p><B>Yhteensä</B>: {{ total }}</p>
+<form method="POST" accept-charset="utf-8">
+	{% csrf_token %}
+	<p><input type="submit" name="inputfield" value="Accept"></p>
+</form>
+
 </div>
 {% endif %}
 {% endblock %}
