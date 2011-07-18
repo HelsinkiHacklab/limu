@@ -20,7 +20,9 @@
 {% endif %}
 </div>
 {% endfor %}
+{% if total %}
 <div class="green box item">
 <p>Yhteensä: {{ total }}</p>
 </div>
+{% endif %}
 {% endblock %}

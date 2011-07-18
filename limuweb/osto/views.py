@@ -1,3 +1,4 @@
+# -*- coding: utf -*-
 # Create your views here.
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -23,8 +24,9 @@ def index(request):
             items = request.session['items'] = []
             account = request.session['account'] = None
         elif inputfield == 'Accept':
-            if isinstance(account,Account) and len(items) > 0:
-                account.debit(sum([maybe_get_price(item) for item in items]))
+            account = AccountCode.get_or_code(account)
+            if hasattr(account,"account") and len(items) > 0:
+                account.account.debit(sum([maybe_get_price(Barcode.get_or_code(item)) for item in items]))
                 items = request.session['items'] = []
                 account = request.session['account'] = None
         else: 
@@ -36,8 +38,14 @@ def index(request):
                 request.session.modified = True
     
     account = AccountCode.get_or_code(account)
+    if not hasattr(account,"account"):
+        request.session["account"]=None
+    if account:
+        inputlabel=u"Syötä tuote"
+    else:
+        inputlabel=u"Syötä tili"
     items = [Barcode.get_or_code(x) for x in items]
-    data = {'account': account, 'items': items[::-1], 'total' : sum([maybe_get_price(item) for item in items])}
+    data = {'account': account, 'inputlabel' : inputlabel, 'items': items[::-1], 'total' : sum([maybe_get_price(item) for item in items])}
     return render_to_response('osto/index.html',
         data,
         context_instance=RequestContext(request))
