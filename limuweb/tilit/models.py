@@ -11,6 +11,7 @@ class Account(models.Model):
         return self.name
     def debit(self,sum):
         self.balance -= sum
+        self.save()
 
 class AccountCode(models.Model):
     account = models.ForeignKey(Account, related_name='account_codes')
