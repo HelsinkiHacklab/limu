@@ -13,7 +13,7 @@ echo "Add universe to sources.list"
 sudo vi /etc/apt/sources.list
 # Installing missing modules
 sudo apt-get update
-sudo apt-get install sshd xserver-xorg-input-elographics yaml-python
+sudo apt-get install sshd xserver-xorg-input-elographics python-yaml
 sudo service gdm stop
 sudo cp $SETUPDIR/xorg.conf /etc/X11/
 sudo service gdm start
@@ -25,8 +25,8 @@ git submodule init
 git submodule update
 cd limuweb
 # Create databases
-./managedb.py syncdb
+./manage.py syncdb
 # Load product information
-./managedb.py loaddata product_data
+./manage.py loaddata product_data
 # Start server
-# ./managedb.py runserver &
+./manage.py runserver
