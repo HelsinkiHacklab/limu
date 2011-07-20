@@ -13,7 +13,7 @@ echo "Add universe to sources.list"
 sudo vi /etc/apt/sources.list
 # Installing missing modules
 sudo apt-get update
-sudo apt-get install sshd xserver-xorg-input-elographics python-yaml
+sudo apt-get install openssh-server xserver-xorg-input-elographics python-yaml
 sudo service gdm stop
 sudo cp $SETUPDIR/xorg.conf /etc/X11/
 sudo service gdm start
