@@ -12,9 +12,10 @@ passwd
 echo "Add universe to sources.list"
 sudo vi /etc/apt/sources.list
 # Installing missing modules
+sudo apt-get update
 sudo apt-get install sshd xserver-xorg-input-elographics yaml-python
 sudo service gdm stop
-cp $SETUPDIR/xorg.conf /etc/X11/
+sudo cp $SETUPDIR/xorg.conf /etc/X11/
 sudo service gdm start
 echo "$LIMUHOST" >/etc/hostname
 
