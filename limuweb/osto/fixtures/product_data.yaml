@@ -58,7 +58,7 @@
 - fields: {code: 6415600509992, product: 5}
   model: osto.barcode
   pk: 5
-- fields: {code: 6415600507875, product: 1}
+- fields: {code: 6415005785, product: 1}
   model: osto.barcode
   pk: 1
 - fields: {code: 6415600502153, product: 6}
