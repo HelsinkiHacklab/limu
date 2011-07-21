@@ -9,17 +9,25 @@ LIMUHOST=limumaatti
 echo "Setting password for $USER"
 passwd
 
-echo "Add universe to sources.list"
-sudo vi /etc/apt/sources.list
+if ls /var/lib/apt/lists/*universe* >/dev/null 2>&1; then
+    echo "Universe already exists"
+else
+    echo "Add universe to sources.list"
+    sudo vi /etc/apt/sources.list
+fi
 # Installing missing modules
 sudo apt-get update
 sudo apt-get install openssh-server xserver-xorg-input-elographics python-yaml
-sudo service gdm stop
-sudo cp $SETUPDIR/xorg.conf /etc/X11/
-sudo service gdm start
-echo "$LIMUHOST" >/etc/hostname
+if [ ! -e /etc/X11/xorg.conf ]; then
+    sudo service gdm stop
+    sudo cp $SETUPDIR/xorg.conf /etc/X11/
+    sudo service gdm start
+fi
 
-cd limu
+if [ `cat /etc/hostname` != $LIMUHOST ]; then
+    sudo echo "$LIMUHOST" >/etc/hostname
+fi
+
 # Setup server
 git submodule init
 git submodule update
