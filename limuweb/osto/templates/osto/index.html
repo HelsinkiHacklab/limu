@@ -11,6 +11,12 @@
 	</form>
   {% else %}
 	Tiliä {{ account }} ei löytynyt.
+	<form action="/new_account" method="post" accept-charset="utf-8">
+		{% csrf_token %}
+		<input type="hidden" name="code" value="{{account}}" id="code">
+		<input type="hidden" name="nimi" value="" id="nimi">
+		<p><input type="submit" name="inputfield" value="Luo tili" onclick="getElementById('nimi').value=getElementById('inputfield').value;"></p>
+	</form>
   {% endif %}
 </div>
 {% endif %}
