@@ -1,6 +1,6 @@
 # -*- coding: utf -*-
 # Create your views here.
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from osto.models import Barcode
 from tilit.models import Account, AccountCode
@@ -40,6 +40,7 @@ def index(request):
     account = AccountCode.get_or_code(account)
     if not hasattr(account,"account"):
         request.session["account"]=None
+        inputlabel=u"Nimi tilille"
     if account:
         inputlabel=u"Syötä tuote"
     else:
@@ -49,4 +50,16 @@ def index(request):
     return render_to_response('osto/index.html',
         data,
         context_instance=RequestContext(request))
+
+def new_account(request):
+    request.session['items']=[]
+    request.session['account']=None
+    if request.method == "POST" and request.POST["nimi"] and request.POST["code"]:
+        account=Account(name=request.POST["nimi"],balance="0.00")
+        account.save()
+        account_code=AccountCode(account=account,code=request.POST["code"])
+        account_code.save()
+        
+    return redirect("/")
+
 
