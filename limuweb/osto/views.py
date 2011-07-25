@@ -41,7 +41,7 @@ def index(request):
     if not hasattr(account,"account"):
         request.session["account"]=None
         inputlabel=u"Nimi tilille"
-    if account:
+    elif account:
         inputlabel=u"Syötä tuote"
     else:
         inputlabel=u"Syötä tili"
