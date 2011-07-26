@@ -1,6 +1,25 @@
 {% extends "base.html" %}
 {% load webdesign %}
 {% block content %}
+{% if account %}
+<div class="green box item">
+  {% if account.account %}
+	<b>{{account.account.name}}:</b> {{account.account.balance}}
+	<form method="POST" accept-charset="utf-8">
+		{% csrf_token %}
+		<p><input type="submit" name="inputfield" value="Clear"></p>
+	</form>
+  {% else %}
+	Tiliä {{ account }} ei löytynyt.
+	<form action="/new_account" method="post" accept-charset="utf-8">
+		{% csrf_token %}
+		<input type="hidden" name="code" value="{{account}}" id="code">
+		<input type="hidden" name="nimi" value="" id="nimi">
+		<p><input type="submit" name="inputfield" value="Luo tili" onclick="getElementById('nimi').value=getElementById('inputfield').value;"></p>
+	</form>
+  {% endif %}
+</div>
+{% endif %}
 {% for item in items %}
 <div class="green box item">
 {% if item.product %}
@@ -11,4 +30,14 @@
 {% endif %}
 </div>
 {% endfor %}
+{% if total %}
+<div class="green box item">
+<p><B>Yhteensä</B>: {{ total }}</p>
+<form method="POST" accept-charset="utf-8">
+	{% csrf_token %}
+	<p><input type="submit" name="inputfield" value="Accept"></p>
+</form>
+
+</div>
+{% endif %}
 {% endblock %}
